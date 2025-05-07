@@ -20,6 +20,7 @@ return {
           "yamlls", -- YAML
           "html", -- HTML
           "cssls", -- CSS
+          "intelephense", -- PHP
           -- Add more as needed
         },
         -- Automatic server setup (handled by nvim-lspconfig)
