@@ -132,3 +132,4 @@ vim.cmd('hi SagaNormal guibg=#1A1C25')
 
 -- Barbeque
 vim.cmd('hi barbecue_normal guibg=#090B0F')
+vim.cmd[[colorscheme catppuccin]]
