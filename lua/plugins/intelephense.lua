@@ -4,6 +4,7 @@ return {
     opts = {
       -- @type lspconfig.options
       servers = {
+        volar = {},
         intelephense = {
           filetypes = { "php", "blade" },
           settings = {
@@ -17,6 +18,15 @@ return {
           },
         },
       },
+      setup = {
+                volar = function ()
+                    require("lazyvim.util").lsp.on_attach(function(client, _)
+                        if client.name == "volar" then
+                            client.server_capabilities.documentFormattingProvider = false
+                        end
+                    end)
+                end
+            }
     },
   },
 }
